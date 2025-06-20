@@ -41,7 +41,6 @@
 ### 📋 Prerequisites
 - [Node.js](https://nodejs.org/)
 - [MySQL](https://www.mysql.com/)
-- [Docker](https://www.docker.com/) *(optional for containerization)*
 
 ### 🚀 Setup Instructions
 
