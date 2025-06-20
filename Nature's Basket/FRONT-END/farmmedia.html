@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Farm</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:wght@700&display=swap" rel="stylesheet">
+    <style>
+
+        /* General Styles */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #444;
+    overflow-x: hidden;
+    background-color: #f9f9f9; /* Subtle off-white background */
+}
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+/* Header */
+header {
+    background: #2a5934; /* Rich dark green for organic feel */
+    color: white;
+    padding: 10px 0; /* Reduced padding (previously 15px 0) */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px; /* Set the height of the logo */
+    width: auto;
+    margin-right: 20px; /* Space between logo and text */
+}
+
+header .logo span {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px; /* Adjusted font size */
+    font-weight: bold;
+    color: #ffca3a; /* Warm yellow-orange for vibrancy */
+}
+
+header .logo span.white-text {
+    color: white; /* Make 'Basket' white */
+    margin-left: 10px; /* Add space between 'Nature's' and 'Basket' */
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Space between navigation items */
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #f4f4f4; /* Light grey for softer contrast */
+    font-weight: bold;
+    font-size: 20px; /* Increased font size */
+    font-family: 'Times New Roman', serif; /* Times New Roman for a classic look */
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffca3a; /* Warm yellow highlight on hover */
+}
+
+/* Styling for subpage content */
+body {
+    font-family: 'Times New Roman', serif; /* Times New Roman for the entire site */
+    color: #333; /* Dark grey for text for better readability */
+    background-color: #f9f9f9; /* Light background for subpages */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Times New Roman', serif; /* Times New Roman for headings */
+    font-weight: bold;
+    color: #2a5934; /* Dark green for headings to maintain theme */
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555; /* Softer grey for paragraph text */
+    font-family: 'Times New Roman', serif; /* Times New Roman for paragraphs */
+    margin-bottom: 20px;
+}
+
+a {
+    color: #2a5934; /* Dark green for links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ffca3a; /* Yellow highlight on hover for links */
+}
+
+/* Hero Section */
+#home.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+
+
+        /* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #3a7d44;
+    color: white;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <img src="Photos/logo1.jpg" alt="Nature's Basket Logo">
+                <span>Nature's</span> <span class="white-text"> Basket</span>
+            </h1>
+            
+            <nav>
+                <ul style="display: flex; list-style-type: none; padding: 0; margin: 0;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="organicway.html">The Organic Way</a></li>
+                    <li><a href="farmmedia.html">Farm Stories</a></li>
+                    <li><a href="login.html">Shop Fresh</a></li>
+                    <li><a href="selllogin.html">Partner With Us</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page with Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #f4f8f7;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c6e49;
+            margin: 30px 0;
+            font-size: 2.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c6e49;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        /* Input Styles */
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b2df7e;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #388e3c;
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            background-color: #66bb6a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+        }
+
+        /* Comments Section */
+        .comments-section {
+            margin: 40px auto;
+            max-width: 600px;
+        }
+
+        .comment-item {
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .comment-item img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .comment-item h4 {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .comment-item p {
+            color: #555;
+        }
+
+        .reply-button {
+            background-color: #81c784;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 8px 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .reply-button:hover {
+            background-color: #66bb6a;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            color: #2c6e49;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Farmers Community</h1>
+
+    <!-- Input Form Card -->
+    <div class="card">
+        <h3>Share Your Thoughts</h3>
+        <div>
+            <label for="username">Your Name:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your name">
+        </div>
+        <div>
+            <label for="comment">Share something:</label>
+            <textarea id="comment" placeholder="What's on your mind?" rows="4"></textarea>
+        </div>
+        <div>
+            <label for="image-upload">Upload an image (optional):</label>
+            <input type="file" id="image-upload" accept="image/*">
+        </div>
+        <button onclick="postComment()">Post</button>
+    </div>
+
+    <!-- User Comments Section -->
+    <div class="comments-section" id="comments-section">
+        <h3>User Comments</h3>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=yourpageurl" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </div>
+
+    <script>
+        const comments = [];
+
+        function isValidImage(file) {
+            const allowedFormats = ['image/jpeg', 'image/png'];
+            const maxSize = 5242880; // 5MB
+
+            if (!allowedFormats.includes(file.type)) {
+                alert('Invalid format. Please upload a .jpg or .png image.');
+                return false;
+            }
+
+            if (file.size > maxSize) {
+                alert('Please upload a file of size below 5MB.');
+                return false;
+            }
+
+            return true;
+        }
+
+        function postComment() {
+            const username = document.getElementById('username').value;
+            const commentText = document.getElementById('comment').value;
+            const imageUpload = document.getElementById('image-upload').files[0];
+
+            if (username && commentText.trim()) {
+                if (imageUpload && !isValidImage(imageUpload)) {
+                    return;
+                }
+
+                const newComment = {
+                    username: username,
+                    comment: commentText,
+                    image: imageUpload ? URL.createObjectURL(imageUpload) : null,
+                };
+
+                comments.push(newComment);
+                displayComments();
+
+                document.getElementById('username').value = '';
+                document.getElementById('comment').value = '';
+                document.getElementById('image-upload').value = '';
+            } else {
+                alert('Please enter both your name and a comment.');
+            }
+        }
+
+        function displayComments() {
+            const commentsSection = document.getElementById('comments-section');
+            commentsSection.innerHTML = '<h3>User Comments</h3>';
+
+            comments.forEach(comment => {
+                const commentItem = document.createElement('div');
+                commentItem.className = 'comment-item';
+
+                const commentTitle = document.createElement('h4');
+                commentTitle.innerText = 'Comment by: ' + comment.username;
+                commentItem.appendChild(commentTitle);
+
+                const commentContent = document.createElement('p');
+                commentContent.innerText = comment.comment;
+                commentItem.appendChild(commentContent);
+
+                if (comment.image) {
+                    const image = document.createElement('img');
+                    image.src = comment.image;
+                    commentItem.appendChild(image);
+                }
+
+                commentsSection.appendChild(commentItem);
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Become a Vendor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section id="signup" class="signup">
+        <div class="container">
+            <h2>Create a Vendor Account</h2>
+            <form action="/sellsignup" method="POST">
+                <!-- Full Name -->
+                <label for="farmer_name">Full Name:</label>
+                <input type="text" id="farmer_name" name="farmer_name" placeholder="Your Full Name" required>
+
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <!-- Phone Number -->
+                <label for="phone_number">Phone Number:</label>
+                <input type="tel" id="phone_number" name="phone_number" placeholder="Your Contact Number" required>
+
+                <!-- Address -->
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="3" placeholder="Your Complete Address" required></textarea>
+
+                <!-- Farm Location -->
+                <label for="farm_location">Farm Location:</label>
+                <input type="text" id="farm_location" name="farm_location" placeholder="Village/City, State, Country" required>
+
+                <!-- Password -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create a Password" required>
+
+                <!-- Confirm Password -->
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your Password" required>
+
+                <!-- Submit Button -->
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <p>Already have an account? <a href="selllogin.html">Login here</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 OrganicFarm. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

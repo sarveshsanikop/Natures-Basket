@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer's Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .navbar {
+            background-color: #4CAF50;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: white;
+        }
+        .navbar-brand:hover, .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .card {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-body {
+            background-color: #fff;
+            padding: 30px;
+        }
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            border-radius: 5px;
+        }
+        .card-header {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Farmer's Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Add Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="myproducts.html">My Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Add Product Form -->
+        <div class="card">
+            <div class="card-header">
+                Add New Organic Product
+            </div>
+            <div class="card-body">
+                <form id="addProductForm">
+                    <div class="form-group">
+                        <label for="product_name">Product Name</label>
+                        <input type="text" class="form-control" id="product_name" name="product_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Product Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select class="form-control" id="category" name="category" required>
+                            <option value="Vegetable">Vegetable</option>
+                            <option value="Fruit">Fruit</option>
+                            <option value="Grain">Grain</option>
+                            <option value="Dairy">Dairy</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price (in Rupees)</label>
+                        <input type="number" class="form-control" id="price" name="price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" name="quantity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image_url">Product Image URL</label>
+                        <input type="text" class="form-control" id="image_url" name="image_url">
+                    </div>
+                    <button type="submit" class="btn btn-submit">Add Product</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle Add Product form submission
+        const addProductForm = document.getElementById('addProductForm');
+        addProductForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+    
+            const product_name = document.getElementById('product_name').value;
+            const description = document.getElementById('description').value;
+            const category = document.getElementById('category').value;
+            const price = parseFloat(document.getElementById('price').value);
+            const quantity = parseInt(document.getElementById('quantity').value);
+            const image_url = document.getElementById('image_url').value;
+    
+            // Prepare data to be sent to the server
+            const productData = {
+                product_name,
+                description,
+                category,
+                price,
+                quantity,
+                image_url
+            };
+    
+            // Send POST request to server to add the product to the database
+            fetch('/addProduct', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(productData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Product added successfully!');
+                    addProductForm.reset();  // Reset form after successful submission
+                } else {
+                    alert('Error adding product!');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while adding the product.');
+            });
+        });
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
