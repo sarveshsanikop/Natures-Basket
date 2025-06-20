@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Farm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #444;
+            overflow-x: hidden;
+            background-color: #f9f9f9;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background: #2a5934;
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px; /* Set the height of the logo */
+    width: auto;
+    margin-right: 20px; /* Space between logo and text */
+}
+
+header .logo span {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px; /* Adjusted font size */
+    font-weight: bold;
+    color: #ffca3a; /* Warm yellow-orange for vibrancy */
+}
+
+header .logo span.white-text {
+    color: white; /* Make 'Basket' white */
+    margin-left: 10px; /* Add space between 'Nature's' and 'Basket' */
+}
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #f4f4f4;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #ffca3a;
+        }
+
+        .hero {
+    background-size: cover; /* Ensure the background image fully covers the section */
+    background-position: center;
+    height: 100vh; /* Set the height to 100% of the viewport */
+    display: flex;
+    align-items: center; /* Keep it centered horizontally */
+    justify-content: center; /* Keep it centered vertically */
+    padding-top: 3vh; /* Lift the heading a bit higher */
+    color: #fff;
+    text-align: center;
+    animation: slideshow 20s infinite;
+}
+
+
+
+        /* Slideshow Background Animation */
+        @keyframes slideshow {
+            0% { background-image: url('Photos/org1.jpeg'); }
+            25% { background-image: url('Photos/org1.jpeg'); }
+            50% { background-image: url('Photos/org1.jpeg'); }
+            75% { background-image: url('Photos/org1.jpeg'); }
+            100% { background-image: url('Photos/org1.jpeg'); }
+        }
+      
+        /* Add a new font family to make the heading more attractive */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.hero h2 {
+    font-family: 'Playfair Display', serif; /* New attractive font */
+    font-size: 80px; /* Make the heading larger */
+    margin: 0;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Make the text shadow stronger */
+    animation: fadeInOut 4s ease-in-out infinite; /* Apply the fadeInOut animation */
+    position: relative;
+    top: -100px; /* Moves the heading higher */
+}
+
+/* Create the fadeInOut animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0; /* Start with the text hidden */
+    }
+    50% {
+        opacity: 1; /* Make the text fully visible at halfway */
+    }
+    100% {
+        opacity: 0; /* End with the text hidden */
+    }
+}
+
+/* New Section for Cards */
+.content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column; /* Stack the cards vertically */
+    gap: 40px; /* Space between the cards */
+}
+
+.card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex; /* Use flexbox for the image and text side by side */
+    height: 300px; /* Fixed height for the card */
+}
+
+.card img {
+    width: 40%; /* Make the image take up 40% of the card width */
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+}
+
+.card .text {
+    padding: 20px; /* Padding for the text section */
+    display: flex;
+    flex-direction: column; /* Stack text elements vertically */
+    justify-content: space-between; /* Distribute space between heading and paragraph */
+    width: 60%; /* Text section takes up the remaining 60% of the card */
+}
+
+.card h3 {
+    font-size: 24px;
+    margin: 0 0 10px 0; /* Margin below the heading */
+    color: #2a5934;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 0;
+    color: #444;
+    line-height: 1.5;
+}
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <img src="Photos/logo1.jpg" alt="Nature's Basket Logo">
+                <span>Nature's</span> <span class="white-text"> Basket</span>
+            </h1>
+                        <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="organicway.html">The Organic Way</a></li>
+                    <li><a href="farmmedia.html">Farm Stories</a></li>
+                    <li><a href="login.html">Shop Fresh</a></li>
+                    <li><a href="selllogin.html">Partner With Us</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h2>Why Choose Organic?</h2>
+    </div>
+
+<!-- Cards Section -->
+<div class="content">
+    <div class="card-container">
+        <div class="card">
+            <img src="Photos/org2.jpg" alt="Why We Need Organic Farming">
+            <div class="text">
+                <h3>Why Organic Farming is Required</h3>
+                <ul>
+                    <li>Protects the environment by reducing harmful chemicals.</li>
+                    <li>Improves soil health through natural farming practices.</li>
+                    <li>Supports animal welfare with humane treatment.</li>
+                    <li>Reduces health risks from pesticide residues.</li>
+                    <li>Mitigates climate change by sequestering carbon.</li>
+                    <li>Boosts local economies and supports community growth.</li>
+                    <li>Addresses soil degradation, water pollution, and biodiversity loss.</li>
+                    <li>Ensures sustainable food production and environmental health.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Photos/org4.jpg" alt="The Guide to Organic Farming">
+            <div class="text">
+                <h3>How to Farm Organically</h3>
+                <ul>
+                    <li>Prepare healthy soil with compost and organic fertilizers.</li>
+                    <li>Practice crop rotation to maintain soil health.</li>
+                    <li>Use natural pest control methods.</li>
+                    <li>Implement sustainable water management techniques.</li>
+                    <li>Choose certified organic seeds.</li>
+                    <li>Encourage biodiversity with diverse crops and pollinators.</li>
+                    <li>Manage weeds using mulching and cover crops.</li>
+                    <li>Monitor soil and crop health regularly.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Photos/org3.jpg" alt="The Benefits of Choosing Organic">
+            <div class="text">
+                <h3>Why Organic Products Are Essential</h3>
+                <ul>
+                    <li>Free from harmful chemicals and pesticides.</li>
+                    <li>Better for human health and nutrition.</li>
+                    <li>Environmentally friendly, reducing pollution and preserving ecosystems.</li>
+                    <li>Promotes sustainable agricultural practices.</li>
+                    <li>Enhances soil fertility and health.</li>
+                    <li>Encourages ethical farming and animal welfare.</li>
+                    <li>Provides better taste and quality.</li>
+                    <li>Helps combat climate change through sustainable farming methods.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <footer>
+        <p>&copy; 2024 Organic Farm Co. All rights reserved.</p>
+    </footer>
+</body>
+</html>
